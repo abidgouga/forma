@@ -19,7 +19,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "tim.h"
-
+#include"timelib.h"
+#include"stdio.h"
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
@@ -141,7 +142,22 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 } 
 
 /* USER CODE BEGIN 1 */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim->Instance == TIM6)
+	{
+		timelib_updatetimecount();
 
+	}
+	if(htim->Instance == TIM7)
+		{
+
+
+			timelib_printtime();
+		}
+
+
+}
 /* USER CODE END 1 */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

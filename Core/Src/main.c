@@ -26,7 +26,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include"terminal.h"
+#include"timelib.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,7 +97,7 @@ int main(void)
 
   /* USER CODE END 2 */
  
- 
+  timelib_init();
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
